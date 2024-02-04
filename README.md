@@ -1,6 +1,6 @@
 # Linux Distro Chooser
 ---
-<img src='./public/tux.png' alt="Tux" width="200" height="400">
+<img src='public/tux.png' alt="Tux" width="200" height="400">
 This is a web application that helps you to select your linux distribution.
 
 ## Successes:
