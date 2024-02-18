@@ -25,3 +25,9 @@
     width: 20%;
     height: 10%;
 }
+
+.welcomeDiv button:hover{
+    background-color: Lightgrey;
+    width: 22%;
+    height: 11%;
+}
