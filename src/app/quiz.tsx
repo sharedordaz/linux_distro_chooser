@@ -10,14 +10,18 @@ export default function Quiz(){
     )}
 
 
-export function displayQuestion(question: Question){
-    return(
+export function displayQuestion(question: Question) {
+    return (
         <form>
-        <h3>{question.title}</h3>
+            <h3>{question.title}</h3>
             <ul>
-                <li></li>
-                <li></li>
+                {question.options.map((option, index) => (
+                    <li key={index}>
+                        <input type="radio" name="option" value={option.value} />
+                        <label>{option.toDisplay}</label>
+                    </li>
+                ))}
             </ul>
         </form>
-    )
-    }
+    );
+}

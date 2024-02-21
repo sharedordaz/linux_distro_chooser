@@ -1,14 +1,15 @@
 type Answer = {
     toDisplay:string,
     value: number,
-    valueToSumTo: string};
+    valueToSumTo: string[]};
 
 type Question = {
     title: string;
-    options: [Answer, Answer, Answer, Answer];
+    options: Answer[];
 };
 
 type desktopEnvironment = 'KDE' | 'GNOME' | 'XFCE' | 'Mate' | 'Cinnamon' | 'LXQT' | 'WM' | 'Deepin' | 'Customizable' | 'Other';
+
 
 type PackageManagers = 'APT' | 'PACMAN' | 'DNF';
 
