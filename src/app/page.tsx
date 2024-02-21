@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import cursor from "../../public/cursor.png"
+import Quiz from "./quiz";
 
 
 
@@ -11,6 +12,8 @@ export default function Home() {
     <p>Start choosing your distro today!</p>
     <br /> <br />
     <button>Start Test</button>
+    <Quiz />
+    
  </div>
  );
 }
