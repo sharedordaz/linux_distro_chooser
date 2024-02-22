@@ -63,3 +63,6 @@
 .quiz ul li label, .quiz ul li input{
     cursor:pointer;
 }
+.quiz button:disabled{
+    display: none;
+}

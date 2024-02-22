@@ -11,37 +11,32 @@ export const answersArray: any[] = [];
 
 export default function Quiz() {
  //Set a question index, from the Json with questions. Enter to the "questions value"
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState(""); // State to track selected option for current question
-  const questions = questionsData.questions;
-  const currentQuestion = questions[currentQuestionIndex];
+    const questions = questionsData.questions;
+    const currentQuestion = questions[currentQuestionIndex];
 
+    function handleNextQuestion () {
+        if (currentQuestionIndex < questions.length - 1) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setSelectedOption(""); // Reset selected option for the next question
+            //returnAnswer();
+            returnAnswer()
+            .then( value => {
+                console.log(value);
+                answersArray.push(value);
+                console.log(`ANSWERS ARRAY: ${answersArray}`)
+                })
+            .catch(error => {
+                console.error(error)
+                })
+        }
+    };
 
-
-
-  function handleNextQuestion () {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOption(""); // Reset selected option for the next question
-      //returnAnswer();
-        returnAnswer()
-        .then( value => {
-            console.log(value);
-            answersArray.push(value);
-            console.log(`ANSWERS ARRAY: ${answersArray}`)
-            })
-        .catch(error => {
-            console.error(error)
-            })
-    }
-
-
-  };
-
-function handleOptionChange (option: Answer) {
-    setSelectedOption(option.toDisplay);
-    checkAnswer(option);// Update selected option when an option is clicke
-  };
+    function handleOptionChange (option: Answer) {
+        setSelectedOption(option.toDisplay);
+        checkAnswer(option);// Update selected option when an option is clicke
+    };
 
   return (
     <div className={styles.quiz}>
@@ -54,7 +49,7 @@ function handleOptionChange (option: Answer) {
           </li>
         ))}
       </ul>
-      <button onClick={handleNextQuestion} disabled={currentQuestionIndex === questions.length - 1}>Next</button>
+      <button onClick={handleNextQuestion} disabled={selectedOption === "" || currentQuestionIndex === questions.length - 1}>Next</button>
     </div>
   );
 }
