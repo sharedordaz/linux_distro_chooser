@@ -1,9 +1,11 @@
+
+
 .welcomeDiv{
     text-align: center;
     line-height: 1.5;
     font-size: 1.5em;
 
-    background-color: brown;
+    background-color: var(--FederalBlue);
     box-shadow: 10px 10px black;
 
     display: flex;
@@ -16,9 +18,14 @@
 
 }
 
+.welcomeDiv h1, .welcomeDiv p{
+    color: white;
+}
+
 
 .welcomeDiv button{
-    background-color: white;
+    background-color: var(--CarolinaBlue);
+    font-weight: bolder;
     cursor: pointer;
 
     margin-top: 2em;
@@ -33,11 +40,12 @@
 }
 
 .quiz{
+
     position: fixed;
     width: 80%;
     height: 90%;
 
     cursor: auto;
     
-    background-color: #FF8C00AA;
+    background-color: #FF8C00FA;
 }
