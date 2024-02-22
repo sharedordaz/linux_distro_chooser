@@ -1,27 +1,34 @@
+'use client'
 import styles from "./page.module.css";
+import { useState } from 'react';
+import questionsData from './questions.json';
 
+export default function Quiz() {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const questions = questionsData.questions;
+  const currentQuestion = questions[currentQuestionIndex];
 
-export default function Quiz(){
-    return(
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
+
+  return (
     <div className={styles.quiz}>
-
+      <h1>{currentQuestion.title}</h1>
+      <ul>
+        {currentQuestion.options.map((option, index) => (
+          <li key={index}>{option.toDisplay}</li>
+        ))}
+      </ul>
+      <button onClick={handleNextQuestion} disabled={currentQuestionIndex === questions.length - 1}>Next</button>
     </div>
-    
-    )}
-
-
-export function displayQuestion(question: Question) {
-    return (
-        <form>
-            <h3>{question.title}</h3>
-            <ul>
-                {question.options.map((option, index) => (
-                    <li key={index}>
-                        <input type="radio" name="option" value={option.value} />
-                        <label>{option.toDisplay}</label>
-                    </li>
-                ))}
-            </ul>
-        </form>
-    );
+  );
 }
+
+
+
+
+
+

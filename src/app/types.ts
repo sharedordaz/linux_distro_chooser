@@ -23,7 +23,7 @@ type LinuxDistribution = {
     basedOn: 'Arch' | 'Debian' | 'Red Hat' | 'Other';
     dificulty: 'Easy' | 'Middle' | 'Advanced' | 'Expert';
     desktopEnvironment: desktopEnvironment;
-    focusedOn: 'Desktop' | 'Server' | 'Enterprise' | 'Performance' | 'Tools' ;
+    focusedOn: 'Desktop' | 'Server' | 'Enterprise' | 'Tools' ;
     rawTerminal: boolean;
     flavors: desktopEnvironment[] ;
     arm: boolean;

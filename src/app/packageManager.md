@@ -81,7 +81,28 @@
     2. MacOS (+2 GNOME)
     3. I dont care about that (0 points)
 
+## For checking OS main purpose
+    **For what are you planning to use your computer**
+    1. Desktop: This includes gaming, web browsing, office, programming and normal use. (Desktop)
+    2. Build a server (Server)
+    3. For a company, maybe multiple computers (Enterprise)
+    4. Other uses (Tools)
 
+## For checking if using terminal
+    **Do you prefer using terminal or graphical interfaces?**
+    1. I prefer to use everything visual (like on windows and MacOS)
+    2. I prefer using the terminal (RawTerminal +1)
+ 
+## ARM
+    **Do you use a ARM processor on your computer?**
+    1. Yes (ARM +1) 
+    2. No
+    3. I dont even know what is that
+
+## Gaming
+    **Do you want a PC optimized for gaming?**
+    1. Yes (EasyGPU +1)
+    2. I prefer a normal distribution (EasyGPU -1)
 
 
 

@@ -1,0 +1,123 @@
+{
+  "questions": [
+    {
+      "title": "Which version of programs do you prefer to install?",
+      "options": [
+        {"toDisplay": "I prefer to use the Newest Version, since it has more features", "value": 1, "valueToSumTo": ["Rolling Release"]},
+        {"toDisplay": "I prefer to use the Stable Version, since it never will have errors", "value": -1, "valueToSumTo": ["Stable"]}
+      ]
+    },
+    {
+      "title": "What do you appreciate more on your machine?",
+      "options": [
+        {"toDisplay": "A large pool of applications available", "value": 1, "valueToSumTo": ["Rolling Release"]},
+        {"toDisplay": "Stability and no risk of errors", "value": -1, "valueToSumTo": ["Rolling Release"]}
+      ]
+    },
+    {
+      "title": "Do you tend to install little-known or community-made software on your PC?",
+      "options": [
+        {"toDisplay": "Yes, I sometimes use software hard to find, or made by the community", "value": 1, "valueToSumTo": ["Rolling Release"]},
+        {"toDisplay": "No, I prefer to use only official software from well-known sources", "value": -1, "valueToSumTo": ["Rolling Release"]}
+      ]
+    },
+    {
+      "title": "Choose how you want to install your software",
+      "options": [
+        {"toDisplay": "The easiest way possible", "value": 1, "valueToSumTo": ["APT"]},
+        {"toDisplay": "The safest way possible", "value": 1, "valueToSumTo": ["DNF"]},
+        {"toDisplay": "The fastest way possible", "value": 1, "valueToSumTo": ["PACMAN"]},
+        {"toDisplay": "I am a computer nerd and I like exotic ways of installing stuff", "value": 1, "valueToSumTo": ["Other"]}
+      ]
+    },
+    {
+      "title": "Which kind of software store would you prefer to use?",
+      "options": [
+        {"toDisplay": "The one that brings only software that works, and is popular between users", "value": 1, "valueToSumTo": ["APT"]},
+        {"toDisplay": "The one that is fast to install software, but also secure", "value": 1, "valueToSumTo": ["DNF"]},
+        {"toDisplay": "The one that has the biggest amount of software available", "value": 1, "valueToSumTo": ["PACMAN"]},
+        {"toDisplay": "The one that is harder to use because I like challenges", "value": 1, "valueToSumTo": ["Other"]}
+      ]
+    },
+    {
+      "title": "Do you like to download software directly from the web browser?",
+      "options": [
+        {"toDisplay": "Yes", "value": 2, "valueToSumTo": ["APT", "DNF"]},
+        {"toDisplay": "I prefer using the terminal", "value": 2, "valueToSumTo": ["PACMAN", "Other"]}
+      ]
+    },
+    {
+      "title": "Do you believe in installing just free software?",
+      "options": [
+        {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["APT"]},
+        {"toDisplay": "No / I don't even know what is that", "value": 0, "valueToSumTo": []}
+      ]
+    },
+    {
+      "title": "What is your experience with Linux or computers?",
+      "options": [
+        {"toDisplay": "This is my first Linux distribution, so please be kind", "value": 0, "valueToSumTo": []},
+        {"toDisplay": "I already used Linux in the past", "value": 1, "valueToSumTo": []},
+        {"toDisplay": "Never used Linux, but I have experience with other operating systems like Windows or MacOS", "value": 1, "valueToSumTo": []},
+        {"toDisplay": "I have experience with Linux", "value": 2, "valueToSumTo": []},
+        {"toDisplay": "I know a lot about Linux and computers and I am ready for challenges. Give me your best shot!", "value": 3, "valueToSumTo": []}
+      ]
+    },
+    {
+      "title": "Please tell me, what do you prefer on your desktop?",
+      "options": [
+        {"toDisplay": "An OS that doesn't require a lot of power or resources and runs fast", "value": 1, "valueToSumTo": ["XFCE", "LXQT", "WM"]},
+        {"toDisplay": "An OS that makes me work more productive", "value": 1, "valueToSumTo": ["GNOME"]},
+        {"toDisplay": "An OS that is as customizable as possible", "value": 1, "valueToSumTo": ["KDE"]},
+        {"toDisplay": "An OS that focuses on beauty", "value": 1, "valueToSumTo": ["Deepin"]}
+      ]
+    },
+    {
+      "title": "You are planning to install Linux on an old slow computer?",
+      "options": [
+        {"toDisplay": "Yes", "value": 3, "valueToSumTo": ["LXQT"]},
+        {"toDisplay": "No", "value": 0, "valueToSumTo": []}
+      ]
+    },
+    {
+      "title": "Do you prefer your OS to look like Windows or MacOS?",
+      "options": [
+        {"toDisplay": "Windows", "value": 2, "valueToSumTo": ["Cinnamon", "KDE"]},
+        {"toDisplay": "MacOS", "value": 2, "valueToSumTo": ["GNOME"]},
+        {"toDisplay": "I don't care about that", "value": 0, "valueToSumTo": []}
+      ]
+    },
+    {
+      "title": "For what are you planning to use your computer?",
+      "options": [
+        {"toDisplay": "Desktop: This includes gaming, web browsing, office, programming, and normal use", "value": 1, "valueToSumTo": ["Desktop"]},
+        {"toDisplay": "Build a server", "value": 1, "valueToSumTo": ["Server"]},
+        {"toDisplay": "For a company, maybe multiple computers", "value": 1, "valueToSumTo": ["Enterprise"]},
+        {"toDisplay": "Other uses", "value": 1, "valueToSumTo": ["Tools"]}
+      ]
+    },
+    {
+      "title": "Do you prefer using terminal or graphical interfaces?",
+      "options": [
+        {"toDisplay": "I prefer to use everything visual (like on Windows and MacOS)", "value": 0, "valueToSumTo": []},
+        {"toDisplay": "I prefer using the terminal", "value": 1, "valueToSumTo": ["RawTerminal"]}
+      ]
+    },
+    {
+      "title": "Do you use an ARM processor on your computer?",
+      "options": [
+        {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["ARM"]},
+        {"toDisplay": "No", "value": 0, "valueToSumTo": []},
+        {"toDisplay": "I don't even know what is that", "value": 0, "valueToSumTo": []}
+      ]
+    },
+    {
+      "title": "Do you want a PC optimized for gaming?",
+      "options": [
+        {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["EasyGPU"]},
+        {"toDisplay": "I prefer a normal distribution", "value": -1, "valueToSumTo": []}
+      ]
+    }
+  ]
+}
+
