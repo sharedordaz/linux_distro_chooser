@@ -4,7 +4,7 @@
       "title": "Which version of programs do you prefer to install?",
       "options": [
         {"toDisplay": "I prefer to use the Newest Version, since it has more features", "value": 1, "valueToSumTo": ["Rolling Release"]},
-        {"toDisplay": "I prefer to use the Stable Version, since it never will have errors", "value": -1, "valueToSumTo": ["Stable"]}
+        {"toDisplay": "I prefer to use the Stable Version, since it never will have errors", "value": -1, "valueToSumTo": ["Rolling Release"]}
       ]
     },
     {
@@ -27,7 +27,7 @@
         {"toDisplay": "The easiest way possible", "value": 1, "valueToSumTo": ["APT"]},
         {"toDisplay": "The safest way possible", "value": 1, "valueToSumTo": ["DNF"]},
         {"toDisplay": "The fastest way possible", "value": 1, "valueToSumTo": ["PACMAN"]},
-        {"toDisplay": "I am a computer nerd and I like exotic ways of installing stuff", "value": 1, "valueToSumTo": ["Other"]}
+        {"toDisplay": "I am a computer nerd and I like exotic ways of installing stuff", "value": 1, "valueToSumTo": ["OtherPM"]}
       ]
     },
     {
@@ -36,14 +36,14 @@
         {"toDisplay": "The one that brings only software that works, and is popular between users", "value": 1, "valueToSumTo": ["APT"]},
         {"toDisplay": "The one that is fast to install software, but also secure", "value": 1, "valueToSumTo": ["DNF"]},
         {"toDisplay": "The one that has the biggest amount of software available", "value": 1, "valueToSumTo": ["PACMAN"]},
-        {"toDisplay": "The one that is harder to use because I like challenges", "value": 1, "valueToSumTo": ["Other"]}
+        {"toDisplay": "The one that is harder to use because I like challenges", "value": 1, "valueToSumTo": ["OtherPM"]}
       ]
     },
     {
       "title": "Do you like to download software directly from the web browser?",
       "options": [
-        {"toDisplay": "Yes", "value": 2, "valueToSumTo": ["APT", "DNF"]},
-        {"toDisplay": "I prefer using the terminal", "value": 2, "valueToSumTo": ["PACMAN", "Other"]}
+        {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["APT", "DNF"]},
+        {"toDisplay": "I prefer using the terminal", "value": 1, "valueToSumTo": ["PACMAN", "OtherPM"]}
       ]
     },
     {
@@ -54,9 +54,9 @@
       ]
     },
     {
-      "title": "What is your experience with Linux or computers?",
+    "title": "What is your experience with Linux or computers?",
       "options": [
-        {"toDisplay": "This is my first Linux distribution, so please be kind", "value": 1, "valueToSumTo": ["Easy"]},
+    {"toDisplay": "This is my first Linux distribution, so please be kind", "value": 1, "valueToSumTo": ["Easy"]},
         {"toDisplay": "I already used Linux in the past", "value": 1, "valueToSumTo": ["Middle"]},
         {"toDisplay": "Never used Linux, but I have experience with other operating systems like Windows or MacOS", "value": 1, "valueToSumTo": ["Middle"]},
         {"toDisplay": "I have experience with Linux", "value": 1, "valueToSumTo": ["Advanced"]},
@@ -68,7 +68,7 @@
       "options": [
         {"toDisplay": "An OS that doesn't require a lot of power or resources and runs fast", "value": 1, "valueToSumTo": ["XFCE", "LXQT", "WM"]},
         {"toDisplay": "An OS that makes me work more productive", "value": 1, "valueToSumTo": ["GNOME"]},
-        {"toDisplay": "An OS that is as customizable as possible", "value": 1, "valueToSumTo": ["KDE"]},
+        {"toDisplay": "An OS that is as customizable as possible", "value": 1, "valueToSumTo": ["KDE", "WM"]},
         {"toDisplay": "An OS that focuses on beauty", "value": 1, "valueToSumTo": ["Deepin"]}
       ]
     },
@@ -84,7 +84,15 @@
       "options": [
         {"toDisplay": "Windows", "value": 2, "valueToSumTo": ["Cinnamon", "KDE"]},
         {"toDisplay": "MacOS", "value": 2, "valueToSumTo": ["GNOME"]},
+        {"toDisplay": "The less similar to them, the better", "value": 2, "valueToSumTo": ["WM"]},
         {"toDisplay": "I don't care about that", "value": 0, "valueToSumTo": [null]}
+      ]
+    },
+    {
+      "title": "Do want your computer to be familiar to use?",
+      "options": [
+        {"toDisplay": "Yes, for sure", "value": 0, "valueToSumTo": [null]},
+        {"toDisplay": "I like to try new things", "value": 1, "valueToSumTo": ["WM"]}
       ]
     },
     {
@@ -97,10 +105,10 @@
       ]
     },
     {
-      "title": "Do you prefer using terminal or graphical interfaces?",
+      "title": "Would you prefer to use a linux distribution that is installed with just a command line, or a linux distribution with a pre-installed system of windows, icons and menus?",
       "options": [
-        {"toDisplay": "I prefer to use everything visual (like on Windows and MacOS)", "value": 0, "valueToSumTo": [null]},
-        {"toDisplay": "I prefer using the terminal", "value": 1, "valueToSumTo": ["RawTerminal"]}
+        {"toDisplay": "I prefer a distribution with the pre-installed tools, ready to use.", "value": 0, "valueToSumTo": [null]},
+        {"toDisplay": "I prefer to start with only the terminal, i have more control over my system", "value": 1, "valueToSumTo": ["RawTerminal"]}
       ]
     },
     {

@@ -233,10 +233,10 @@
   "release": "Rolling Release",
   "packageManager": "XBPS",
   "basedOn": "Other",
-  "difficulty": "Advanced",
+  "difficulty": "Expert",
   "desktopEnvironment": "Customizable",
   "focusedOn": "Desktop",
-  "rawTerminal": false,
+  "rawTerminal": true,
   "flavors": [],
   "arm": false,
   "easyGPU": false

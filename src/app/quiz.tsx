@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import { useState } from 'react';
 import questionsData from './questions.json';
-import { checkAnswer, returnAnswer } from './library';
+import { checkAnswer, parseAnswers, returnAnswer } from './library';
 import { Answer } from "./types";
 
 
@@ -44,6 +44,8 @@ export default function Quiz() {
             .catch(error => {
                 console.error(error)
                 })
+            parseAnswers(answersArray);
+            
         };
 
     function handleOptionChange (option: Answer) {
