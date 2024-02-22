@@ -1,20 +1,20 @@
-type Answer = {
+export type Answer = {
     toDisplay:string,
     value: number,
-    valueToSumTo: string[]};
+    valueToSumTo: string[] | null | null[]};
 
-type Question = {
+export type Question = {
     title: string;
     options: Answer[];
 };
 
-type desktopEnvironment = 'KDE' | 'GNOME' | 'XFCE' | 'Mate' | 'Cinnamon' | 'LXQT' | 'WM' | 'Deepin' | 'Customizable' | 'Other';
+export type desktopEnvironment = 'KDE' | 'GNOME' | 'XFCE' | 'Mate' | 'Cinnamon' | 'LXQT' | 'WM' | 'Deepin' | 'Customizable' | 'Other';
 
 
-type PackageManagers = 'APT' | 'PACMAN' | 'DNF';
+export type PackageManagers = 'APT' | 'PACMAN' | 'DNF';
 
 
-type LinuxDistribution = {
+export type LinuxDistribution = {
     name: string;
     logo: string;
     description: string;
@@ -31,4 +31,4 @@ type LinuxDistribution = {
         // Add more parameters as needed
 };
 
-type QuestionParameter = 'release' | 'basedOn' | 'dificulty' | 'desktopEnvironment' | 'focusedOn' | 'rawTerminal' | 'arm' | 'easyGPU';
+export type QuestionParameter = 'release' | 'basedOn' | 'dificulty' | 'desktopEnvironment' | 'focusedOn' | 'rawTerminal' | 'arm' | 'easyGPU';

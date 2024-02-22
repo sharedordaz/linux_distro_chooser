@@ -55,3 +55,11 @@
     list-style: none;
     text-align: justify;
 }
+
+.quiz ul li:hover{
+    background-color: #EE7B00;
+}
+
+.quiz ul li label, .quiz ul li input{
+    cursor:pointer;
+}

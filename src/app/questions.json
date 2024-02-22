@@ -50,17 +50,17 @@
       "title": "Do you believe in installing just free software?",
       "options": [
         {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["APT"]},
-        {"toDisplay": "No, I don't even know what is that", "value": 0, "valueToSumTo": []}
+        {"toDisplay": "No, I don't even know what is that", "value": 0, "valueToSumTo": [null]}
       ]
     },
     {
       "title": "What is your experience with Linux or computers?",
       "options": [
-        {"toDisplay": "This is my first Linux distribution, so please be kind", "value": 0, "valueToSumTo": []},
-        {"toDisplay": "I already used Linux in the past", "value": 1, "valueToSumTo": []},
-        {"toDisplay": "Never used Linux, but I have experience with other operating systems like Windows or MacOS", "value": 1, "valueToSumTo": []},
-        {"toDisplay": "I have experience with Linux", "value": 2, "valueToSumTo": []},
-        {"toDisplay": "I know a lot about Linux and computers and I am ready for challenges. Give me your best shot!", "value": 3, "valueToSumTo": []}
+        {"toDisplay": "This is my first Linux distribution, so please be kind", "value": 1, "valueToSumTo": ["Easy"]},
+        {"toDisplay": "I already used Linux in the past", "value": 1, "valueToSumTo": ["Middle"]},
+        {"toDisplay": "Never used Linux, but I have experience with other operating systems like Windows or MacOS", "value": 1, "valueToSumTo": ["Middle"]},
+        {"toDisplay": "I have experience with Linux", "value": 1, "valueToSumTo": ["Advanced"]},
+        {"toDisplay": "I know a lot about Linux and computers and I am ready for challenges. Give me your best shot!", "value": 1, "valueToSumTo": ["Expert"]}
       ]
     },
     {
@@ -76,7 +76,7 @@
       "title": "You are planning to install Linux on an old slow computer?",
       "options": [
         {"toDisplay": "Yes", "value": 3, "valueToSumTo": ["LXQT"]},
-        {"toDisplay": "No", "value": 0, "valueToSumTo": []}
+        {"toDisplay": "No", "value": 0, "valueToSumTo": [null]}
       ]
     },
     {
@@ -84,7 +84,7 @@
       "options": [
         {"toDisplay": "Windows", "value": 2, "valueToSumTo": ["Cinnamon", "KDE"]},
         {"toDisplay": "MacOS", "value": 2, "valueToSumTo": ["GNOME"]},
-        {"toDisplay": "I don't care about that", "value": 0, "valueToSumTo": []}
+        {"toDisplay": "I don't care about that", "value": 0, "valueToSumTo": [null]}
       ]
     },
     {
@@ -99,7 +99,7 @@
     {
       "title": "Do you prefer using terminal or graphical interfaces?",
       "options": [
-        {"toDisplay": "I prefer to use everything visual (like on Windows and MacOS)", "value": 0, "valueToSumTo": []},
+        {"toDisplay": "I prefer to use everything visual (like on Windows and MacOS)", "value": 0, "valueToSumTo": [null]},
         {"toDisplay": "I prefer using the terminal", "value": 1, "valueToSumTo": ["RawTerminal"]}
       ]
     },
@@ -107,17 +107,16 @@
       "title": "Do you use an ARM processor on your computer?",
       "options": [
         {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["ARM"]},
-        {"toDisplay": "No", "value": 0, "valueToSumTo": []},
-        {"toDisplay": "I don't even know what is that", "value": 0, "valueToSumTo": []}
+        {"toDisplay": "No", "value": 0, "valueToSumTo": [null]},
+        {"toDisplay": "I don't even know what is that", "value": 0, "valueToSumTo": [null]}
       ]
     },
     {
       "title": "Do you want a PC optimized for gaming?",
       "options": [
         {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["EasyGPU"]},
-        {"toDisplay": "I prefer a normal distribution", "value": -1, "valueToSumTo": []}
+        {"toDisplay": "I prefer a normal distribution", "value": -1, "valueToSumTo": [null]}
       ]
     }
   ]
 }
-

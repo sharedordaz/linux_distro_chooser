@@ -2,23 +2,25 @@
 import styles from "./page.module.css";
 import { useState } from 'react';
 import questionsData from './questions.json';
-import uploadAnswer from './library';
+import { checkAnswer } from './library';
+import { Answer } from "./types";
+
 
 
 
 export default function Quiz() {
  //Set a question index, from the Json with questions. Enter to the "questions value"
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedOption, setSelectedOption] = useState(null); // State to track selected option for current question
+    const [selectedOption, setSelectedOption] = useState(""); // State to track selected option for current question
   const questions = questionsData.questions;
   const currentQuestion = questions[currentQuestionIndex];
 
 
 
-  const handleNextQuestion = (option:any) => {
+  const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOption(null); // Reset selected option for the next question
+      setSelectedOption(""); // Reset selected option for the next question
       console.log(selectedOption)
     }
 
@@ -26,9 +28,9 @@ export default function Quiz() {
 
   };
 
-function handleOptionChange (option) {
+function handleOptionChange (option: Answer) {
     setSelectedOption(option.toDisplay);
-    uploadAnswer(option);// Update selected option when an option is clicke
+    checkAnswer(option);// Update selected option when an option is clicke
   };
 
   return (
@@ -38,11 +40,11 @@ function handleOptionChange (option) {
         {currentQuestion.options.map((option, index) => (
           <li key={index} > 
             <input checked={selectedOption === option.toDisplay} onClick={() => handleOptionChange(option)} type="radio" id={option.toDisplay}  name={`question-${currentQuestionIndex}`} value={option.value}/>
-            <label for={option.toDisplay}>{option.toDisplay}</label>
+            <label htmlFor={option.toDisplay}>{option.toDisplay}</label>
           </li>
         ))}
       </ul>
-      <button onClick={() => handleNextQuestion(questions[currentQuestionIndex])} disabled={currentQuestionIndex === questions.length - 1}>Next</button>
+      <button onClick={handleNextQuestion} disabled={currentQuestionIndex === questions.length - 1}>Next</button>
     </div>
   );
 }
