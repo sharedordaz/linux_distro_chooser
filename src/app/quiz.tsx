@@ -6,7 +6,7 @@ import { checkAnswer, returnAnswer } from './library';
 import { Answer } from "./types";
 
 
-export const answersArray = [];
+export const answersArray: any[] = [];
 
 
 export default function Quiz() {
@@ -18,15 +18,21 @@ export default function Quiz() {
 
 
 
+
   function handleNextQuestion () {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedOption(""); // Reset selected option for the next question
       //returnAnswer();
-        returnAnswer(answersArray);
-        console.log(`answersArray`);
-      //constantsArray.push(returnAnswer)
-        
+        returnAnswer()
+        .then( value => {
+            console.log(value);
+            answersArray.push(value);
+            console.log(`ANSWERS ARRAY: ${answersArray}`)
+            })
+        .catch(error => {
+            console.error(error)
+            })
     }
 
 

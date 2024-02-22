@@ -14,13 +14,14 @@ export async function checkAnswer(option: Answer){
 
       }
 
-export async function returnAnswer(answersArray: string[]){
-
+export async function returnAnswer() {
+    return new Promise((resolve, reject) => {
         const actualAnswer = cookies().get("Answer");
-        if (actualAnswer){
-            console.log(`ANSWER READ: ${actualAnswer.value}`)
-            answersArray.push(actualAnswer.value)
-            //console.log(answersArray);
-            
+        if (actualAnswer) {
+            //console.log(`ANSWER READ: ${actualAnswer.value}`);
+            resolve(actualAnswer.value);
+        } else {
+            reject(new Error("No answer found in cookies."));
         }
-    }
+    });
+}
