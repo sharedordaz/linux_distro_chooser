@@ -115,7 +115,7 @@
       "title": "Do you want a PC optimized for gaming?",
       "options": [
         {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["EasyGPU"]},
-        {"toDisplay": "I prefer a normal distribution", "value": -1, "valueToSumTo": [null]}
+        {"toDisplay": "I prefer a normal distribution", "value": 0, "valueToSumTo": [null]}
       ]
     }
   ]

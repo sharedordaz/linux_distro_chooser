@@ -33,6 +33,19 @@ export default function Quiz() {
         }
     };
 
+    function handleSubmitQuiz (){
+        //console.log("Quiz Submitted")
+            returnAnswer()
+            .then( value => {
+                console.log(value);
+                answersArray.push(value);
+                console.log(`ANSWERS ARRAY: ${answersArray}`)
+                })
+            .catch(error => {
+                console.error(error)
+                })
+        };
+
     function handleOptionChange (option: Answer) {
         setSelectedOption(option.toDisplay);
         checkAnswer(option);// Update selected option when an option is clicke
@@ -50,6 +63,12 @@ export default function Quiz() {
         ))}
       </ul>
       <button onClick={handleNextQuestion} disabled={selectedOption === "" || currentQuestionIndex === questions.length - 1}>Next</button>
+      {currentQuestionIndex === questions.length - 1 && (
+      <button onClick= {handleSubmitQuiz}>
+        Submit Quiz
+      </button>
+
+      )}
     </div>
   );
 }
