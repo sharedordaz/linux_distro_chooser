@@ -22,42 +22,42 @@
 
 ## For checking stable vs rolling release (More points is release)
 
--- **Which version of programs you prefer to install?**
+- **Which version of programs you prefer to install?**
     1. I prefer to use the Newest Version, since it has more features (+1 points to release)
     2. I prefer to use the Stable Version, since it never will have errors (-1 points to release)
 
--- **What you appreciate more on your machine?**
+- **What you appreciate more on your machine?**
     1. A large pool of applications avaliable(+1 points to Rollingrelease)
     2. Stability and no risk of errors  (-1 points to Rollingrelease)
 
--- **You tend to install little-known or community-made software on your pc?**
+- **You tend to install little-known or community-made software on your pc?**
     1. Yes, i sometimes use software hard to find, or made by the community. (+1 points to Rollingrelease)
     2. No, i prefer to use only official software from well-known sources (-1 ponts to Rollingrelease)
 
 ## For checking the best package manager
-    **Choose how you want to install your software**
+- **Choose how you want to install your software**
     1. The easiest way possible (+1 points to APT)
     2. The safeiest way possible (+1 points to DNF)
     3. The fastest way possible (+1 points to Pacman)
     4. I am a computer nerd and i like exotic ways of installing stuff (+1 points to Other)
     
-    **Which kind of software store you would prefer to use?**
+- **Which kind of software store you would prefer to use?**
     1. The one that brings only software that works, and is popular between users (+1 points to APT)
     2. The one that is fast to install software, but also secure. (+1 points to DNF)
     3. The one that have the bigger amount of software avaliable. (+1 points to PACMAN)
     4. The one that is harder to use because i like challenges (+1 points to Other)
 
-    **Do you like to download software directly from the web browser?**
+- **Do you like to download software directly from the web browser?**
     1. Yes (+2 points to APT and DNF)
     2. I prefer using terminal (+2 points to PACMAN and Other)
 
-    **Do you believe on installing just free software?**
+- **Do you believe on installing just free software?**
     1. Yes (1 points to APT)
     2. No / I dont even know what is that (0 points)
 
     
 ## For checking difficulty
-    **What is your experience with linux or computers?**
+- **What is your experience with linux or computers?**
     1. This is my first linux distribution, so please be kind (Easy)
     2. I already used linux on the past (Medium)
     3. Never used linux, but i have experience with other operative systems like windows or MacOS(Medium)
@@ -66,41 +66,41 @@
     5. An OS that offers a balance between performance and aesthetics (+1 Cinnamon)
     
 ## For checking favorite desktop environment
-    **Please tell me, what you prefer on your desktop?**
+- **Please tell me, what you prefer on your desktop?**
     1. An OS that doesnt require a lot of power, or resources, and runs fast (+1 to XFCE, LXQT, WM)
     2. An OS that makes me work more productive (+1 GNOME)
     3. An OS that is the more customizable as possible (+1 KDE)
     4. An OS that focus on beauty (+ 1 Deepin)
     
-    **You are planning to install linux on an old slow computer?**
+- **You are planning to install linux on an old slow computer?**
     1. Yes (+3 LXQT)
     2. No (0 points)
 
-    **Do you prefer your os to look like windows or MacOS?**
+- **Do you prefer your os to look like windows or MacOS?**
     1. Windows (+2 Cinnamon, KDE)
     2. MacOS (+2 GNOME)
     3. I dont care about that (0 points)
 
 ## For checking OS main purpose
-    **For what are you planning to use your computer**
+- **For what are you planning to use your computer**
     1. Desktop: This includes gaming, web browsing, office, programming and normal use. (Desktop)
     2. Build a server (Server)
     3. For a company, maybe multiple computers (Enterprise)
     4. Other uses (Tools)
 
 ## For checking if using terminal
-    **Do you prefer using terminal or graphical interfaces?**
+- **Do you prefer using terminal or graphical interfaces?**
     1. I prefer to use everything visual (like on windows and MacOS)
     2. I prefer using the terminal (RawTerminal +1)
  
 ## ARM
-    **Do you use a ARM processor on your computer?**
+- **Do you use a ARM processor on your computer?**
     1. Yes (ARM +1) 
     2. No
     3. I dont even know what is that
 
 ## Gaming
-    **Do you want a PC optimized for gaming?**
+- **Do you want a PC optimized for gaming?**
     1. Yes (EasyGPU +1)
     2. I prefer a normal distribution (EasyGPU -1)
 

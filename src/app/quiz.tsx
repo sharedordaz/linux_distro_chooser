@@ -2,10 +2,11 @@
 import styles from "./page.module.css";
 import { useState } from 'react';
 import questionsData from './questions.json';
-import { checkAnswer } from './library';
+import { checkAnswer, returnAnswer } from './library';
 import { Answer } from "./types";
 
 
+export const answersArray = [];
 
 
 export default function Quiz() {
@@ -17,14 +18,17 @@ export default function Quiz() {
 
 
 
-  const handleNextQuestion = () => {
+  function handleNextQuestion () {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedOption(""); // Reset selected option for the next question
-      console.log(selectedOption)
+      //returnAnswer();
+        returnAnswer(answersArray);
+        console.log(`answersArray`);
+      //constantsArray.push(returnAnswer)
+        
     }
 
-    //console.log(option);
 
   };
 
