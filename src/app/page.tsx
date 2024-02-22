@@ -1,15 +1,9 @@
 'use client'
-import Image from "next/image";
 import styles from "./page.module.css";
 import cursor from "../../public/cursor.png"
 import Quiz from "./quiz";
 
 import { useState } from 'react';
-
-
-function displayQuiz(){
-        
-    }
 
 
 export default function Home() {
