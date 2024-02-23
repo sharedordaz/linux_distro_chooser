@@ -294,7 +294,7 @@ function showIdealDistro(counter: answersCounter ){
     return userResults;
     }
 
-export async function storeResults (results: UserResults ){
+export async function storeResults (results: any ){
     console.log('StoreResults: ');
     cookies().delete('Results');
     cookies().set(`Results`, JSON.stringify(results));

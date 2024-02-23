@@ -9,16 +9,6 @@ export const answersArray: any[] = [];
 export var QuizResults: UserResults | [] = [];
 var quizSubmitted: boolean = false;
 
-
-function redirectToAnotherPage() {
-    console.log("Redirection to /results")
-    const router = useRouter();
-    router.push('/results'); // Replace '/your-page' with the path of the page you want to navigate to
-}
-
-
-
-
 export default function Quiz() {
  //Set a question index, from the Json with questions. Enter to the "questions value"
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -55,7 +45,7 @@ export default function Quiz() {
                 console.error(error)
                 })
 
-            parseAnswers(answersArray).then( value => {
+            parseAnswers(answersArray).then( (value: any) => {
                 QuizResults = value;
                 storeResults(QuizResults);
                 quizSubmitted = true;
