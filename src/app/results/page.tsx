@@ -25,11 +25,20 @@ export default async function results() {
                             {tableRows}
                         </tbody>
                     </table>
+                    <a href="/"><button>Go to the main site</button></a>
                     </div>
                 </div>
             );
         } else {
-            throw new Error("CookiedResults is not of type UserResults");
+            return (
+                <div className={styles.results}>
+                    <div className={styles.resultsBox}>
+                    <h1>There are no results</h1>
+                    <a href="/"><button>Go to the main site</button></a>
+                    </div>
+                </div>
+            );
+
         }
     } catch (error) {
         console.error(error);

@@ -1,7 +1,7 @@
 [
   {
     "name": "Ubuntu",
-    "logo": "ubuntu_logo.png",
+    "logo": "ubuntu-logo.png",
     "description": "Ubuntu is a popular Linux distribution based on Debian.",
     "release": "Stable",
     "packageManager": "APT",
@@ -134,21 +134,7 @@
     "arm": true,
     "easyGPU": false
   },
-  {
-    "name": "RaspberryOS",
-    "logo": "raspberryos_logo.png",
-    "description": "RaspberryOS is a Linux distribution optimized for Raspberry Pi boards.",
-    "release": "Stable",
-    "packageManager": "APT",
-    "basedOn": "Debian",
-    "difficulty": "Easy",
-    "desktopEnvironment": "Customizable",
-    "focusedOn": "Desktop",
-    "rawTerminal": false,
-    "flavors": [],
-    "arm": true,
-    "easyGPU": true
-  },
+
   {
     "name": "Zorin OS",
     "logo": "zorin_os_logo.png",
