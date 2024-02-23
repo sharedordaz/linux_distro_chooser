@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import { useState } from 'react';
 import questionsData from './questions.json';
-import { checkAnswer, parseAnswers, returnAnswer } from './library';
+import { checkAnswer, parseAnswers, returnAnswer, storeResults } from './library';
 import { Answer, UserResults } from "./types";
 
 
@@ -48,6 +48,7 @@ export default function Quiz() {
 
             parseAnswers(answersArray).then( value => {
                 QuizResults = value;
+                storeResults(QuizResults);
                 //console.log(`QUIZ RESULTS: \n${JSON.stringify(QuizResults)}`);
 
                 }).catch(error => {

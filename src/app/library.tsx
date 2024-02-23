@@ -15,19 +15,20 @@ export async function checkAnswer(option: Answer){
       }
 
 export async function returnAnswer() {
+    console.log("RUNNING RETURN ANSWER()")
     return new Promise((resolve, reject) => {
         const actualAnswer = cookies().get("Answer");
         if (actualAnswer) {
             //console.log(`ANSWER READ: ${actualAnswer.value}`);
             resolve(actualAnswer.value);
         } else {
-            reject(new Error("No answer found in cookies."));
+            reject(new Error("ReturnAnswer() failed on find cookies."));
         }
     });
 }
 
 export async function parseAnswers(answersArray: any[]){
-    console.log(`UNPARSED ANSWERS: ${answersArray}`)
+    console.log(`parseAnswers:\nUNPARSED ANSWERS: ${answersArray}`)
 
     const counter: answersCounter = {
     release: {
@@ -289,5 +290,29 @@ function showIdealDistro(counter: answersCounter ){
         
     console.log(userResults)
     return userResults;
+    }
+
+export async function storeResults (results: UserResults ){
+    console.log('StoreResults: ');
+    cookies().delete('Results');
+    cookies().set(`Results`, JSON.stringify(results));
+    console.log("RESULTS COOKIED: ",cookies().get('Results'));
+
+    }
+
+export async function getCookiedResults(){
+        return new Promise((resolve, reject) => {
+        const results = cookies()?.get("Results")?.value;
+        if (results) {
+            //console.log(`ANSWER READ: ${results}`);
+            let parsedResults = JSON.parse(results);
+            
+            resolve(parsedResults);
+        } else {
+            reject(new Error("Results from getCookiedResults() dont working."));
+        }
+    });
+
+    
     }
 
