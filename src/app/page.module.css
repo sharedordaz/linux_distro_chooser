@@ -103,3 +103,15 @@
 .distroButton:hover{
     background-color: lightgray;
 }
+
+@media only screen and (max-height: 430px) {
+  /* Your CSS styles specific to mobile devices go here */
+
+    .quiz label{
+    font-size: 0.6em;
+    }
+    .quiz h2{
+    font-size: 1em;
+    }
+}
+
