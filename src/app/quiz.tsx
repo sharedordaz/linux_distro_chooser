@@ -5,9 +5,18 @@ import questionsData from './questions.json';
 import { checkAnswer, parseAnswers, returnAnswer, storeResults } from './library';
 import { Answer, UserResults } from "./types";
 
-
 export const answersArray: any[] = [];
 export var QuizResults: UserResults | [] = [];
+var quizSubmitted: boolean = false;
+
+
+function redirectToAnotherPage() {
+    console.log("Redirection to /results")
+    const router = useRouter();
+    router.push('/results'); // Replace '/your-page' with the path of the page you want to navigate to
+}
+
+
 
 
 export default function Quiz() {
@@ -49,6 +58,8 @@ export default function Quiz() {
             parseAnswers(answersArray).then( value => {
                 QuizResults = value;
                 storeResults(QuizResults);
+                quizSubmitted = true;
+                
                 //console.log(`QUIZ RESULTS: \n${JSON.stringify(QuizResults)}`);
 
                 }).catch(error => {
@@ -78,6 +89,14 @@ export default function Quiz() {
       <button onClick= {handleSubmitQuiz}>
         Submit Quiz
       </button>
+
+      )}
+
+    {quizSubmitted === true && (
+      <a href="/results"><button>
+        See Results
+      </button>
+      </a>
 
       )}
     </div>
