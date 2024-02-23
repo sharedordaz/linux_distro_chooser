@@ -1,6 +1,6 @@
 'use server'
 import { cookies } from 'next/headers';
-import { Answer, answersCounter } from './types';
+import { Answer, LinuxDistribution, UserResults, answersCounter } from './types';
 
 
 export default async function Library(){
@@ -77,11 +77,11 @@ export async function parseAnswers(answersArray: any[]){
                 break;
             case 'APT':
                 counter.packageManager.APT += itsvalue;
-                                console.log(`Added ${itsvalue} points to ${key}`);
+                console.log(`Added ${itsvalue} points to ${key}`);
                 break;
             case 'DNF':
                 counter.packageManager.DNF += itsvalue;
-                                console.log(`Added ${itsvalue} points to ${key}`);
+                console.log(`Added ${itsvalue} points to ${key}`);
                 break;
             case 'PACMAN':
                 counter.packageManager.PACMAN += itsvalue;
@@ -157,8 +157,70 @@ export async function parseAnswers(answersArray: any[]){
                    }
 
     })
-    console.log(JSON.stringify(counter))
+    //console.log(JSON.stringify(counter))
 
-
+    showIdealDistro(counter)
 
 }
+
+function showIdealDistro(counter: answersCounter ){
+    const userResults: UserResults = {
+    release: 'Stable',
+    packageManager: 'APT',
+    dificulty: 'Expert',
+    desktopEnvironment: 'KDE',
+    focusedOn: 'Desktop' ,
+    rawTerminal: false,
+    arm: false,
+    easyGPU: false, //Install NVidia or AMD drivers by default, good for gaming.
+};
+
+    console.log(counter);
+
+
+    let biggestNumber = 0;
+    //Evaluate the best package manager based on points
+    //console.log(counter.packageManager)
+    Object.entries(counter.packageManager).forEach((entry) => {
+        //console.log(`VALUE: ${entry}`)
+
+        if (entry[1] > biggestNumber){
+                biggestNumber = entry[1]
+                //console.log(biggestNumber)
+                userResults.packageManager = entry[0];
+            }
+        })
+    
+    let biggestNumber2 = 0;
+    //Evaluate the best desktopEnvironment based on points
+    Object.entries(counter.desktopEnvironment).forEach((entry) => {
+        console.log(`VALUE: ${entry}`)
+
+        if (entry[1] > biggestNumber2){
+                biggestNumber2 = entry[1]
+                //console.log(biggestNumber)
+                userResults.desktopEnvironment = entry[0];
+            }
+        })
+
+    //Check if the user wants rolling release
+    if (counter.release.rolling > 0){
+        userResults.release = "Rolling Release";
+        }
+    else{
+        userResults.release = "Stable";
+        }
+    //Other Easy to process results
+    userResults.dificulty = counter.dificulty;
+    userResults.focusedOn = counter.focusedOn;
+    userResults.easyGPU = counter.gaming;
+    userResults.rawTerminal = counter.rawTerminal;
+    userResults.arm = counter.ARM;
+
+
+
+
+        
+    console.log(userResults)
+    }
+

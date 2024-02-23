@@ -33,6 +33,18 @@ export type LinuxDistribution = {
         // Add more parameters as needed
 };
 
+export type UserResults = {
+    release: 'Rolling Release' | 'Stable';
+    packageManager: PackageManagers | string;
+    dificulty: 'Easy' | 'Middle' | 'Advanced' | 'Expert';
+    desktopEnvironment: string;
+    focusedOn: 'Desktop' | 'Server' | 'Enterprise' | 'Tools' ;
+    rawTerminal: boolean;
+    arm: boolean;
+    easyGPU: boolean; //Install NVidia or AMD drivers by default, good for gaming.
+};
+
+
 export type answersCounter = {
     release: {
         rolling: number,

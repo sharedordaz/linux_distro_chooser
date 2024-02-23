@@ -46,13 +46,7 @@
         {"toDisplay": "I prefer using the terminal", "value": 1, "valueToSumTo": ["PACMAN", "OtherPM"]}
       ]
     },
-    {
-      "title": "Do you believe in installing just free software?",
-      "options": [
-        {"toDisplay": "Yes", "value": 1, "valueToSumTo": ["APT"]},
-        {"toDisplay": "No, I don't even know what is that", "value": 0, "valueToSumTo": [null]}
-      ]
-    },
+
     {
     "title": "What is your experience with Linux or computers?",
       "options": [
