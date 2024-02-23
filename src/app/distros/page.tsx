@@ -13,6 +13,8 @@ export default function Distributions() {
       </Head>
 
       <h1>Linux Distributions</h1>
+      <a href="/"><button>Go back to home page</button></a>
+
 
       <div className="grid-container">
         {distributionsData.map((distribution, index) => (

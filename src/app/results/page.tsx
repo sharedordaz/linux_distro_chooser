@@ -19,13 +19,14 @@ export default async function results() {
             return (
                 <div className={styles.results}>
                     <div className={styles.resultsBox}>
-                    <h1>What are your preferences</h1>
+                    <h1>Your ideal distribution</h1>
                     <table>
                         <tbody>
                             {tableRows}
                         </tbody>
                     </table>
                     <a href="/"><button>Go to the main site</button></a>
+                    <a href="/distros"><button>Go and compare with other distributions</button></a>
                     </div>
                 </div>
             );

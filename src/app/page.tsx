@@ -15,11 +15,18 @@ export default function Home() {
  return(
  <div className={styles.welcomeDiv} style={{cursor:`url(${cursor.src}), crosshair`}}>
     <h1>Linux Distro Chooser</h1>
+
     <p>Start choosing your distro today!</p>
     <br /> <br />
+
     {!showQuiz && (
         <button onClick={handleStartTest}>Start Test</button>
+
+
     )}
+    <a className={styles.distroButton} href="/distros">Show distributions</a>
+
+
     {showQuiz && <Quiz />}
     
  </div>
