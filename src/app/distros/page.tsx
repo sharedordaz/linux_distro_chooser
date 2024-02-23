@@ -1,7 +1,7 @@
 'use client'
 import Head from 'next/head';
 import Image from 'next/image';
-import distributionsData from '/public/distrosTest.json';
+import distributionsData from '../../../public/distrosTest.json';
 
 export default function Distributions() {
   return (
