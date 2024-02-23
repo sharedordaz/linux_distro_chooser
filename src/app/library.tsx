@@ -66,7 +66,69 @@ export async function parseAnswers(answersArray: any[]){
         if (key.includes(',')){ // Manage multikey values
             console.log("MULTIKEY DETECTED")
             let multikey = key.split(',');
-            multikey.forEach((v : string) => {console.log(v)})
+            multikey.forEach((v : string) => {
+            switch(v){
+            case 'APT':
+                counter.packageManager.APT += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+            case 'DNF':
+                counter.packageManager.DNF += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+            case 'PACMAN':
+                counter.packageManager.PACMAN += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'OtherPM':
+                counter.packageManager.OtherPM += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+//--------Desktop Environment
+            case 'KDE':
+                counter.desktopEnvironment.KDE += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'GNOME':
+                counter.desktopEnvironment.GNOME += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'XFCE':
+                counter.desktopEnvironment.XFCE += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'Mate':
+                counter.desktopEnvironment.Mate += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'Cinnamon':
+                counter.desktopEnvironment.Cinnamon += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'LXQT':
+                counter.desktopEnvironment.LXQT += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'WM':
+                counter.desktopEnvironment.WM += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+
+            case 'Deepin':
+                counter.desktopEnvironment.Deepin += itsvalue;
+                console.log(`Added ${itsvalue} points to ${v}`);
+                break;
+                    }
+
+                console.log(v)
+                })
             }
         console.log(key, itsvalue);
         
@@ -159,7 +221,15 @@ export async function parseAnswers(answersArray: any[]){
     })
     //console.log(JSON.stringify(counter))
 
-    showIdealDistro(counter)
+    const results = showIdealDistro(counter);
+    return new Promise((resolve, reject) => {
+        if (results) {
+            //console.log(`ANSWER READ: ${actualAnswer.value}`);
+            resolve(results);
+        } else {
+            reject(new Error("The quiz results could not be calculated"));
+        }
+    });
 
 }
 
@@ -216,11 +286,8 @@ function showIdealDistro(counter: answersCounter ){
     userResults.easyGPU = counter.gaming;
     userResults.rawTerminal = counter.rawTerminal;
     userResults.arm = counter.ARM;
-
-
-
-
         
     console.log(userResults)
+    return userResults;
     }
 

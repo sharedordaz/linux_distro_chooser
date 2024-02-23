@@ -3,10 +3,11 @@ import styles from "./page.module.css";
 import { useState } from 'react';
 import questionsData from './questions.json';
 import { checkAnswer, parseAnswers, returnAnswer } from './library';
-import { Answer } from "./types";
+import { Answer, UserResults } from "./types";
 
 
 export const answersArray: any[] = [];
+export var QuizResults: UserResults | [] = [];
 
 
 export default function Quiz() {
@@ -44,7 +45,14 @@ export default function Quiz() {
             .catch(error => {
                 console.error(error)
                 })
-            parseAnswers(answersArray);
+
+            parseAnswers(answersArray).then( value => {
+                QuizResults = value;
+                //console.log(`QUIZ RESULTS: \n${JSON.stringify(QuizResults)}`);
+
+                }).catch(error => {
+                    console.error(error);
+                    })
             
         };
 
